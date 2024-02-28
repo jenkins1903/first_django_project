@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block breadcrumbs %}
+    <a href="/items/">Список товаров</a> › {{ item.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ item.name }}</h1>
+    <p>Бренд: {{ item.brand }}</p>
+    <p>Количество: {% if item.count > 0 %}{{ item.count }}{% else %}товара нет на складе{% endif %}</p>
+    <p>Описание: {{ item.description }}</p>
+    <a href="/items/">Вернуться к списку товаров</a>
+{% endblock %}

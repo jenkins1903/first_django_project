@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Список товаров</h1>
+    <div class="items-grid">
+        {% for item in items %}
+            <div class="item-card">
+                <h2>{{ item.name }}</h2>
+                <p>Бренд: {{ item.brand }}</p>
+                <p>Количество: {% if item.quantity > 0 %}{{ item.quantity }}{% else %}товара нет на складе{% endif %}</p>
+                <a href="{% url 'item_detail' item_id=item.id %}">Подробнее</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+</head>
+<style>
+    .items-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; 
+    }
+
+    .item-card {
+        border: 1px solid #ddd; 
+        border-radius: 8px; 
+        padding: 16px; 
+        width: 200px; 
+    }
+
+    .item-card h2 {
+        margin-top: 0;
+    }
+
+    .item-card a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #007bff; 
+    }
+</style>
+
+<body>
+    <div class="breadcrumbs">
+        <a href="/">Главная</a> ›
+        {% block breadcrumbs %}{% endblock %}
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

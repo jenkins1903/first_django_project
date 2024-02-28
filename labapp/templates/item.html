@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ item.name }}</title>
+</head>
+<body>
+    <h1>{{ item.name }}</h1>
+    <p>Идентификатор товара: {{ item.id }}</p>
+    <p>Количество: {{ item.quantity|default:"товар отсутствует" }}</p>
+    <a href="/items/">Вернуться к списку товаров</a>
+</body>
+</html>
+
+
+<!-- {% block title %}{{ item.name }}{% endblock %}
+
+{% block breadcrumbs %}
+    <a href="/items/">Список товаров</a> › {{ item.name }}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ item.name }}</h1>
+    <p>Идентификатор товара: {{ item.id }}</p>
+    <p>Количество: {{ item.quantity|default:"товар отсутствует" }}</p>
+    <a href="/items/">Вернуться к списку товаров</a>
+{% endblock %} -->
